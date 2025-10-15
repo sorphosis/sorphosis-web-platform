@@ -1,0 +1,39 @@
+<!-- navbar.component.html -->
+<nav class="navbar">
+    <div class="nav-container">
+        <!-- Logo -->
+        <a routerLink="/" class="nav-logo">Sorphosis</a>
+
+        <!-- Desktop Menu -->
+        <ul class="nav-menu">
+            <li><a routerLink="/" routerLinkActive="active">Home</a></li>
+            <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+            <li><a routerLink="/consulting" routerLinkActive="active">Consulting</a></li>
+            <li><a routerLink="/products" routerLinkActive="active">Products</a></li>
+            <li><a routerLink="/support" routerLinkActive="active">Support</a></li>
+            <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+        </ul>
+
+        <!-- Mobile Hamburger -->
+        <button class="nav-hamburger" [class.active]="isMobileMenuOpen" (click)="toggleMobileMenu()"
+            aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu-overlay" [class.active]="isMobileMenuOpen" (click)="closeMobileMenu()">
+
+    <div class="mobile-menu" (click)="$event.stopPropagation()">
+        <ul class="mobile-menu-list">
+            <li><a routerLink="/" (click)="closeMobileMenu()">Home</a></li>
+            <li><a routerLink="/about" (click)="closeMobileMenu()">About</a></li>
+            <li><a routerLink="/products" (click)="closeMobileMenu()">Products</a></li>
+            <li><a routerLink="/support" (click)="closeMobileMenu()">Support</a></li>
+            <li><a routerLink="/contact" (click)="closeMobileMenu()">Contact</a></li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+.swiper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.swiper img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.swiper button {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}

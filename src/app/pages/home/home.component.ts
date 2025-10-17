@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { ClientSwiperComponent } from '../../components/client-swiper/client-swiper.component';
+import { ClientSectionComponent } from '../../components/client-section/client-section.component';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 
 @Component({
   selector: 'app-home',
-  imports: [ClientSwiperComponent, NavbarComponent, FooterComponent],
+  imports: [ClientSectionComponent, NavbarComponent, FooterComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

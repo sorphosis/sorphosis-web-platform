@@ -14,14 +14,14 @@ interface Client {
 export class ClientSectionComponent {
   clients: Client[] = [
     {
-      name: 'Figma',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1667px-Figma-logo.svg.png',
-      type: 'Design'
+      name: 'Kuik CV',
+      logo: '../../../../kuikcv.png',
+      type: 'Human Resources'
     },
     {
-      name: 'Slack',
-      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Slack_icon_2019.svg/2048px-Slack_icon_2019.svg.png',
-      type: 'Communication'
+      name: 'TBPart',
+      logo: '../../../../tbpart.png',
+      type: 'Manufacturing'
     },
     {
       name: 'McDonald\'s',

@@ -1,22 +1,39 @@
-<app-navbar></app-navbar>
-<br><br><br><br><br>
+<!-- Hero Section -->
+<section class="hero-section" id="hero">
+  <div class="hero-content">
+    <h1 class="hero-title">SORPHOSIS</h1>
+    <p class="hero-subtitle">Crafting Digital Excellence</p>
+    
+    <button class="scroll-arrow" (click)="scrollToContent()">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 5v14M19 12l-7 7-7-7"/>
+      </svg>
+    </button>
+  </div>
+</section>
 
-<section>
+<!-- Navbar (aparece ao fazer scroll) -->
+<app-navbar [visible]="showNavbar"></app-navbar>
+
+<!-- Main Content -->
+<div class="main-content" id="content">
+  <section>
     <h2>Consulting</h2>
     <p>Expert advice for your tech journey.</p>
     <a routerLink="/consulting">Learn more</a>
-</section>
-<section>
+  </section>
+  <section>
     <h2>Projects</h2>
     <p>See our innovative work.</p>
     <a routerLink="/projects">View projects</a>
-</section>
-<section>
+  </section>
+  <section>
     <h2>Products</h2>
     <p>Discover our products.</p>
     <a routerLink="/products">Browse products</a>
-</section>
-<section>
+  </section>
+  <section>
     <app-client-section></app-client-section>
-</section>
-<app-footer></app-footer>
+  </section>
+  <app-footer></app-footer>
+</div>

@@ -1,0 +1,23 @@
+<section class="clients-section">
+    <div class="corner-line"></div>
+    <div class="accent-dot"></div>
+
+    <div class="section-header">
+        <div class="eyebrow">Confiança</div>
+        <h2 class="section-title">Clientes que confiam em nós</h2>
+        <p class="section-subtitle">
+            Trabalhamos com empresas inovadoras que partilham a nossa visão de excelência digital.
+        </p>
+    </div>
+
+    <div class="clients-grid">
+        @for (client of clients; track client.name) {
+        <div class="client-card">
+            <div class="client-logo-wrapper">
+                <img [src]="client.logo" [alt]="client.name" class="client-logo-img">
+            </div>
+            <div class="client-type">{{ client.type }}</div>
+        </div>
+        }
+    </div>
+</section>

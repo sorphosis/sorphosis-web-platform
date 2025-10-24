@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ClientSwiperComponent } from './client-swiper.component';
+import { ClientSectionComponent } from './client-section.component';
 
-describe('ClientSwiperComponent', () => {
-  let component: ClientSwiperComponent;
-  let fixture: ComponentFixture<ClientSwiperComponent>;
+describe('ClientSectionComponent', () => {
+  let component: ClientSectionComponent;
+  let fixture: ComponentFixture<ClientSectionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ClientSwiperComponent]
+      imports: [ClientSectionComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ClientSwiperComponent);
+    fixture = TestBed.createComponent(ClientSectionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

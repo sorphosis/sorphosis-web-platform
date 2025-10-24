@@ -2,15 +2,13 @@
 <nav class="navbar">
     <div class="nav-container">
         <!-- Logo -->
-        <a routerLink="/" class="nav-logo">Sorphosis</a>
+        <a routerLink="/" class="nav-logo"><img src="../../../../logo2.png">Sorphosis</a>
 
         <!-- Desktop Menu -->
         <ul class="nav-menu">
-            <li><a routerLink="/" routerLinkActive="active">Home</a></li>
-            <li><a routerLink="/about" routerLinkActive="active">About</a></li>
-            <li><a routerLink="/consulting" routerLinkActive="active">Consulting</a></li>
+            <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+            <li><a routerLink="/work" routerLinkActive="active">Work</a></li>
             <li><a routerLink="/products" routerLinkActive="active">Products</a></li>
-            <li><a routerLink="/support" routerLinkActive="active">Support</a></li>
             <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
         </ul>
 
@@ -29,11 +27,26 @@
 
     <div class="mobile-menu" (click)="$event.stopPropagation()">
         <ul class="mobile-menu-list">
-            <li><a routerLink="/" (click)="closeMobileMenu()">Home</a></li>
-            <li><a routerLink="/about" (click)="closeMobileMenu()">About</a></li>
-            <li><a routerLink="/products" (click)="closeMobileMenu()">Products</a></li>
-            <li><a routerLink="/support" (click)="closeMobileMenu()">Support</a></li>
-            <li><a routerLink="/contact" (click)="closeMobileMenu()">Contact</a></li>
+            <li><a routerLink="/" routerLinkActive="active" (click)="closeMobileMenu()">Home</a></li>
+            <li><a routerLink="/work" routerLinkActive="active" (click)="closeMobileMenu()">Work</a></li>
+            <li><a routerLink="/products" routerLinkActive="active" (click)="closeMobileMenu()">Products</a></li>
+            <li><a routerLink="/contact" routerLinkActive="active" (click)="closeMobileMenu()">Contact</a></li>
         </ul>
+
+        <div class="mobile-menu-footer">
+            <div class="footer-links-grid">
+                <a routerLink="/about" (click)="closeMobileMenu()">About</a>
+                <a routerLink="/support" (click)="closeMobileMenu()">Support</a>
+                <a routerLink="/contact" (click)="closeMobileMenu()">Contact</a>
+                <a routerLink="/careers" (click)="closeMobileMenu()">Careers</a>
+                <a routerLink="/legal" (click)="closeMobileMenu()">Legal</a>
+                <a routerLink="/cookies" (click)="closeMobileMenu()">Cookies</a>
+            </div>
+
+            <div class="footer-action-buttons">
+                <a routerLink="/get-started" (click)="closeMobileMenu()" class="btn-primary">Get started</a>
+                <a routerLink="/get-started" (click)="closeMobileMenu()" class="btn-secondary">Latest releases</a>
+            </div>
+        </div>
     </div>
 </div>

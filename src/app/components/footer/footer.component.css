@@ -1,212 +1,147 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.contact-section {
+  background-color: #000;
+  color: #fff;
+  padding: 60px 20px 30px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
-footer {
-  width: 100%;
-  background: #000;
-  position: relative;
-  overflow: hidden;
-  font-family: 'Inter', sans-serif;
-}
-
-/* ===== Circle background (decorativo) ===== */
-.circle-bg {
-  position: absolute;
-  top: -100px; /* reduzido */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 200px; /* reduzido */
-  height: 200px; /* reduzido */
-  border: 1px solid #111;
-  border-radius: 50%;
-  opacity: 0.4;
-}
-
-/* ===== Container principal ===== */
-.footer-wrapper {
+.container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 40px 30px; /* mais compacto */
-  text-align: center;
 }
 
-/* ===== Nome da marca ===== */
-.brand-name {
-  font-size: 14px;
-  letter-spacing: 6px;
-  color: #444;
-  text-transform: uppercase;
-  margin-bottom: 30px; /* reduzido */
-  font-weight: 400;
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  margin-bottom: 40px;
 }
 
-/* ===== Mensagem principal ===== */
-.main-message {
-  font-size: 48px; /* reduzido */
-  font-weight: 200;
-  color: #fff;
-  line-height: 1.1;
-  margin-bottom: 10px; /* reduzido */
-  letter-spacing: -2px;
-}
-
-/* ===== Asterisco animado ===== */
-.asterisk {
-  font-size: 32px; /* ligeiramente menor */
-  color: #666;
-  margin: 0 10px;
-  display: inline-block;
-  animation: spin 20s linear infinite;
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* ===== Submensagem ===== */
-.sub-message {
-  font-size: 16px; /* reduzido */
-  color: #666;
-  font-weight: 300;
-  margin-bottom: 40px; /* reduzido */
-  letter-spacing: 1px;
-}
-
-/* ===== Métodos de contacto ===== */
-.contact-methods {
-  display: flex;
-  justify-content: center;
-  gap: 60px; /* reduzido */
-  margin-bottom: 50px; /* reduzido */
-}
-
-.method-block {
-  text-align: center;
-}
-
-.method-label {
-  font-size: 10px;
-  letter-spacing: 3px;
-  color: #444;
-  text-transform: uppercase;
-  margin-bottom: 15px; /* reduzido */
-  font-weight: 600;
-}
-
-/* ===== Email e telefone com animação ===== */
-.method-value {
-  color: #fff;
-  font-size: 18px; /* ligeiramente menor */
-  text-decoration: none;
+.label {
   display: block;
-  letter-spacing: 0.5px;
-  position: relative;
-  transition: color 0.3s;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #666;
+  margin-bottom: 25px;
+  font-weight: 500;
 }
 
-.method-value::after {
-  content: '';
-  position: absolute;
-  bottom: -6px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 1px;
-  background: #fff;
-  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+.title {
+  font-size: 38px;
+  line-height: 1.2;
+  margin: 0 0 25px 0;
+  font-weight: 400;
+  letter-spacing: -0.5px;
 }
 
-.method-value:hover {
-  color: #ccc;
+.italic {
+  font-style: italic;
+  font-weight: 300;
+  color: #999;
 }
 
-.method-value:hover::after {
-  width: 100%;
+.description {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #999;
+  margin-bottom: 35px;
+  max-width: 450px;
 }
 
-/* ===== Linha vertical ===== */
-.vertical-line {
-  width: 1px;
-  height: 40px; /* reduzido */
-  background: linear-gradient(to bottom, transparent, #222, transparent);
-  margin: 0 auto 30px; /* reduzido */
+.email-link {
+  display: inline-block;
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 4px;
+  transition: all 0.3s ease;
 }
 
-/* ===== Rodapé inferior ===== */
-.footer-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 20px; /* reduzido */
-  border-top: 1px solid #111;
-  font-size: 12px;
-  color: #444;
+.email-link:hover {
+  color: #999;
+  border-bottom-color: #999;
 }
 
-/* ===== Links sociais ===== */
 .social-links {
   display: flex;
-  gap: 30px;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .social-link {
-  color: #555;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   text-decoration: none;
-  font-size: 11px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  transition: color 0.3s;
-  position: relative;
-}
-
-.social-link::before {
-  content: '';
-  position: absolute;
-  top: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 3px;
-  height: 3px;
-  background: #555;
-  border-radius: 50%;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.social-link:hover {
   color: #fff;
+  transition: all 0.3s ease;
 }
 
-.social-link:hover::before {
-  opacity: 1;
+.social-link:hover .social-name {
+  color: #999;
 }
 
-/* ===== Responsive design ===== */
+.social-link:hover .social-handle {
+  color: #666;
+}
+
+.social-name {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.social-handle {
+  font-size: 13px;
+  color: #999;
+  transition: color 0.3s ease;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 25px;
+  border-top: 1px solid #1a1a1a;
+  font-size: 12px;
+  color: #555;
+}
+
+.copyright {
+  letter-spacing: 0.5px;
+}
+
+.company {
+  letter-spacing: 0.5px;
+}
+
+/* Responsive */
 @media (max-width: 968px) {
-  .footer-wrapper {
-    padding: 50px 30px 30px; /* reduzido */
+  .content-wrapper {
+    grid-template-columns: 1fr;
+    gap: 60px;
   }
 
-  .main-message {
-    font-size: 36px; /* menor em mobile */
+  .title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-section {
+    padding: 40px 20px 20px 20px;
   }
 
-  .contact-methods {
+  .title {
+    font-size: 26px;
+  }
+
+  .footer {
     flex-direction: column;
-    gap: 40px;
-  }
-
-  .footer-info {
-    flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     text-align: center;
+    font-size: 9px;
   }
 }

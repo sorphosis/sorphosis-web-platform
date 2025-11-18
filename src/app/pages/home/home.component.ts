@@ -28,8 +28,12 @@ export class HomeComponent {
     const scrollPosition = window.pageYOffset;
     const heroHeight = window.innerHeight;
 
+    // Update properties
     this.showNavbar = scrollPosition > heroHeight * 0.8;
     this.scrollProgress = Math.min(scrollPosition / heroHeight, 1);
+
+    // *** ADD THIS LINE ***
+    this.cdr.detectChanges();
   }
 
   onMouseMove(event: MouseEvent) {

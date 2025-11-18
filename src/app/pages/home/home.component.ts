@@ -11,7 +11,7 @@ import { ServiceCardComponent } from "../../components/service-card/service-card
   standalone: true, // Assuming this was missing, as per current Angular structure
   imports: [ClientSectionComponent, NavbarComponent, FooterComponent, CommonModule, RouterModule, ServiceCardComponent],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
   showNavbar = false;

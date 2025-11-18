@@ -1,5 +1,5 @@
 <!-- navbar.component.html -->
-<nav class="navbar">
+<nav class="navbar" [class.visible]="visible">
     <div class="nav-container">
         <!-- Logo -->
         <a routerLink="/" class="nav-logo"><img src="../../../../logo2.png">Sorphosis</a>
@@ -8,7 +8,7 @@
         <ul class="nav-menu">
             <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
             <li><a routerLink="/work" routerLinkActive="active">Work</a></li>
-            <li><a routerLink="/products" routerLinkActive="active">Products</a></li>
+            <li><a routerLink="/products" routerLinkActive="active">Services</a></li>
             <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
         </ul>
 

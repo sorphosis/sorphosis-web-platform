@@ -1,22 +1,57 @@
-<app-navbar></app-navbar>
-<br><br><br><br><br>
+<div class="home-container">
+    <section class="hero-section" (mousemove)="onMouseMove($event)">
 
-<section>
-    <h2>Consulting</h2>
-    <p>Expert advice for your tech journey.</p>
-    <a routerLink="/consulting">Learn more</a>
-</section>
-<section>
-    <h2>Projects</h2>
-    <p>See our innovative work.</p>
-    <a routerLink="/projects">View projects</a>
-</section>
-<section>
-    <h2>Products</h2>
-    <p>Discover our products.</p>
-    <a routerLink="/products">Browse products</a>
-</section>
-<section>
-    <app-client-section></app-client-section>
-</section>
-<app-footer></app-footer>
+        <div class="hero-background-art" [style.left.px]="mouseX" [style.top.px]="mouseY">
+        </div>
+
+
+
+        <div class="hero-content" [style.opacity]="1 - scrollProgress">
+            <img src="logo2.png" style="width: 40px" alt="Sorphosis Logo">
+            <h1 class="company-name">Sorphosis</h1>
+            <p class="tagline">Innovative Solutions for a Digital Future.</p>
+        </div>
+
+        <div class="scroll-indicator" (click)="scrollToContent()" [style.opacity]="1 - scrollProgress">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <div class="navbar-wrapper" [class.visible]="showNavbar">
+        <app-navbar></app-navbar>
+    </div>
+
+    <div class="main-content">
+        <section class="content-section consulting-section">
+            <h2>Phrase here like 7EGEND</h2>
+        </section>
+
+        <section class="content-section consulting-section">
+            <h2>Consulting</h2>
+            <p>Expert advice for your tech journey.</p>
+            <a routerLink="/consulting">Learn more</a>
+
+            <div class="consulting-cards">
+                <div class="consulting-cards">
+                    <app-service-card title="Data Strategy"
+                        description="We help our clients to design, plan and implement the best digital and business transformation strategies, always with an eye towards innovation, market leadership, new business models, monetization of solutions and new revenues. Through data we extract the most relevant inputs, in order to help businesses make the best possible decisions.">
+                    </app-service-card>
+
+                    <app-service-card title="Creativity & Innovation"
+                        description="7EGEND unique sports innovation mindset is recognized by our clients as an innovative approach, focused on creating new products and solutions, to achieve the best possible experiences across all touchpoints, guaranteeing an important, engaging and satisfying connection between fans and clubs, exceeding everyone's expectations.">
+                    </app-service-card>
+
+                    <app-service-card title="Engineering Development"
+                        description="Our multidisciplinary engineering team comes from different backgrounds, with experience in working with complex and top performance systems across all industries, and is specialized in sports industry. Ready to operate at speed and scale, it is the team responsible for the development of 7EGEND’s suite of products for football clubs. Always with this in mind: simpler, faster, better, stronger.">
+                    </app-service-card>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <app-client-section></app-client-section>
+        </section>
+
+        <app-footer></app-footer>
+    </div>
+</div>

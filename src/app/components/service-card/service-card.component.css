@@ -1,0 +1,43 @@
+.service-card {
+  flex: 1 1 300px;
+  max-width: 350px;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  min-height: 400px; /* make all cards same height */
+  justify-content: center; /* vertically center content */
+  background-color: rgba(0, 0, 0, 0.4); /* dark overlay like in image */
+  transition: transform 0.3s ease;
+}
+
+.service-card:first-child {
+  border-left: none;
+}
+
+.service-card:hover {
+  transform: translateY(-5px); /* subtle hover effect */
+}
+
+.icon {
+  font-size: 3rem; /* bigger like in image */
+  color: #00ffff;
+  margin-bottom: 1.5rem;
+}
+
+.service-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.6;
+}
